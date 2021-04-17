@@ -1,0 +1,33 @@
+.users__container{
+    flex: 0.30;
+
+    background-color: white;
+}
+
+.users__header{
+    background-color: #00bfa5;
+    padding: 5px 10px;
+}
+
+.users__header .MuiSvgIcon-root{
+    color: white;
+}
+
+
+.users__search{
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.521);
+}
+.users__search__container{
+    border-radius: .3em;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.users__search__container > input{
+    flex-grow: 1;
+    border: none;
+    padding: 5px;
+}

@@ -1,0 +1,21 @@
+.footer > form > button{
+    display: none;
+}
+
+.footer{
+    padding: 5px 2px;
+    display: flex;
+    align-items: center;
+}
+
+.footer > form {
+    display: flex;
+    flex: 1;
+}
+
+.footer > form > input{
+    padding:10px;
+    border-radius: .5em;
+    border:none;
+    flex: 1;
+}

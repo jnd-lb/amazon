@@ -1,0 +1,24 @@
+.login__body{
+    background-color: white;
+    padding: 70px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 20px -6px rgb(0 0 0 / 39%);
+}
+
+.login__body > img{
+    margin-bottom: 15px;
+    height: 100px;
+}
+
+.login__body > button{
+    background-color: #1cc433;
+    padding: 8px 12px;
+    color: white;
+}
+.login__body > button:hover{
+    background-color: #159b27;
+}
+
