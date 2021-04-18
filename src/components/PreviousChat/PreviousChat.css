@@ -1,8 +1,10 @@
-.previouschat__container{
+.previouschat__container{    
     display: flex;
     align-items: center;
     padding: 10px 20px;
+    cursor: pointer;
 }
+
 
 .previouschat__container:hover{
     background-color: #ebebeb;
@@ -13,6 +15,7 @@
 }
 
 .previouschat__container__details h1{
+    color: rgba(0, 0, 0, 0.9);
     font-size: 16px;
     margin: 0;
     padding: 0;

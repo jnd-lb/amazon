@@ -3,9 +3,9 @@ import './SingleUser.css'
 
 import { Avatar, IconButton } from '@material-ui/core';
 
-export default function SingleUser({ name, id, picture }) {
+export default function SingleUser({ name, id, picture,onClick }) {
     return (
-            <div className="singleuser__container">
+            <div onClick={onClick} className="singleuser__container">
                 <Avatar src={picture}/>
                 <div className="singleuser__container__name">
                     <h1>{name}</h1>

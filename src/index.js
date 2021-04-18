@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import UserContextProvider from './components/UserContextProvider';
+import ChatContextProvider from './components/ChatContextProvider';
 
 ReactDOM.render(
   <React.StrictMode>
+    <ChatContextProvider>
     <UserContextProvider>
     <App />
     </UserContextProvider>
+    </ChatContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

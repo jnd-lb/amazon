@@ -6,9 +6,13 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import ChatIcon from '@material-ui/icons/Chat';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
-import { Link } from 'react-router-dom';
+import { useChatContext } from '../../ChatContextProvider'
+import Chat from "../../ChatType";
+import Receiver from "../../ReceiverType";
 
-export default function Conversations({ user, conversations,showUsers }) {
+export default function Conversations({ user, conversations, showUsers }) {
+
+    const [chat, setChat] = useChatContext()
     return (
         <div className="conversations">
             <div className="conversations__header">
@@ -38,10 +42,13 @@ export default function Conversations({ user, conversations,showUsers }) {
             </div>
             <div className="conversations__chats">
 
-                {conversations.map(pc => (
-                    <Link to={`/chat/${pc.id}`}>
-                        <PreviousChat key={pc.id} title={pc.data.name} />
-                    </Link>
+                {conversations.map(c => (
+                    <PreviousChat
+                        onClick={() => {
+                            setChat(
+                                new Chat(c.id,new Receiver(c.user.name,c.user.id,c.user.picture))
+                            )
+                        }} key={c.id} title={c.user.name} picture={c.user.picture} />
                 ))}
 
             </div>

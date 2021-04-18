@@ -38,7 +38,10 @@
 
 .conversations__chats{
     overflow-y: scroll;
-   
+    
     flex: 1;
     background-color: white;
+}
+.conversations__chats a{
+    text-decoration: none;
 }
