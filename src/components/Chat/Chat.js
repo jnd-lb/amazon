@@ -3,6 +3,7 @@ import "./Chat.css"
 import { Avatar, IconButton } from '@material-ui/core';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import SearchIcon from '@material-ui/icons/Search';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Message from "./Message/Message"
 import Footer from './Footer/Footer';
@@ -106,8 +107,16 @@ export default function Chat() {
     }
 
     return (
-        <div className="chat">
-            <div className="chat__header">
+        <div className={`chat  ${chat?"show":"hide"}`}>
+            <div className="chat__header"
+            >
+                <IconButton
+                onClick={()=>{
+                    setChat(null)
+                }}
+                className="chat__header__backicon show">
+                    <ArrowBackIcon />
+                </IconButton>
                 <Avatar src={picture} />
                 <div className="chat__header__info">
                     <h2>{recieveName}</h2>

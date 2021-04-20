@@ -1,6 +1,5 @@
 .users__container{
-    flex: 0.30;
-
+    width: 100%;
     background-color: white;
 }
 

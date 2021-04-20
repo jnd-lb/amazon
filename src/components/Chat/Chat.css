@@ -38,6 +38,10 @@
     justify-content: space-between;
 }
 
+.chat__header__backicon{
+    display: none !important;
+}
+
 .chat__body{
     flex: 1;
     background-image: url(https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
@@ -46,3 +50,9 @@
     overflow-y: scroll;
     padding: 30px 20px 20px 20px;
 }
+
+@media only screen and (max-width: 700px) {
+    .chat{
+        flex: 1;
+    }
+  }

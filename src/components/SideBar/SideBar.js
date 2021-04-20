@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
-
 import "./SideBar.css";
 import db from "../../firebase";
 import { useUserContext } from '../../components/UserContextProvider';
 import Conversations from './Conversations/Conversation';
 import Users from './Users/Users';
+import {useChatContext} from "../../components/ChatContextProvider";
 
 export default function SideBar() {
-
     const [showUsersList, setShowUsersList] = useState(false);
-
+    const [chat] = useChatContext();
     const user = useUserContext();
     const [conversations, setConversations] = useState([]);
     const [users, setUsers] = useState([]);
@@ -43,9 +42,11 @@ export default function SideBar() {
 
 
     return (
-        (showUsersList) ?
-            <Users showConversations={() => { setShowUsersList(false) }} users={users} />
-            :
-            <Conversations showUsers={() => setShowUsersList(true)} user={user} conversations={conversations} />
+        <div className={`sidebar show ${chat&& "hide"}`}>
+            {(showUsersList) ?
+                <Users showConversations={() => { setShowUsersList(false) }} users={users} />
+                :
+                <Conversations showUsers={() => setShowUsersList(true)} user={user} conversations={conversations} />}
+        </div>
     )
 }
