@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Login from './components/Login/Login';
 import {useUserContext} from "./components/UserContextProvider";
 import {useChatContext} from "./components/ChatContextProvider";
+import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
 
 function App() {
   const user = useUserContext();
@@ -19,10 +20,7 @@ function App() {
        <Router>
 
           <SideBar />
-          {(chat)?<Chat />:<div className="app__welcomescreen">
-              <img src="https://static.vecteezy.com/system/resources/previews/001/308/763/non_2x/woman-working-from-home-student-or-freelancer-vector.jpg" alt="girl using a laptop" />
-              <h1>Welcome to the Web Whatsapp Clone</h1>
-            </div>}
+          {(chat)?<Chat />:<WelcomeScreen/>}
            
        </Router>
       </div>

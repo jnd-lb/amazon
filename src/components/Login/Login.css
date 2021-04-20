@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: center;
     box-shadow: 1px 1px 20px -6px rgb(0 0 0 / 39%);
+    transition: all 0.8s ease;
 }
 
 .login__body > img{
@@ -22,3 +23,18 @@
     background-color: #159b27;
 }
 
+@media only screen and (max-width: 600px) {
+    .login__body {
+      width: 100vw;
+      height: 100vh;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+    }
+    .login__body h1{
+        font-size: 1.5rem;
+    }
+  }
