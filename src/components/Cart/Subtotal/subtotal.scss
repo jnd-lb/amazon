@@ -1,0 +1,27 @@
+@import "../../colors.scss";
+
+.subtotal{
+    background-color: $lightgray;
+    padding: 20px;
+    & p{
+        margin-bottom: 0;
+    }
+    &__button{
+        border: 0;
+        padding: 5px;
+        margin-top: 20px;
+        cursor: pointer;
+        max-width: 300px;
+        width: 100%;
+        background-color: $orange;
+    }
+    &__gift{
+        display: flex;
+        align-items: center;
+        & input{
+            padding: 0;
+            margin: 0;
+            margin-right: 10px;
+        }
+    }
+}

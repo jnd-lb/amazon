@@ -1,0 +1,48 @@
+@import "../colors.scss";
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & img{
+        width: 150px;
+        margin: 30px;
+    }
+
+    &__form{
+        width: 40%;
+        padding: 20px;
+        border: 1px #ddd solid;
+        display: flex;
+        flex-direction: column;
+        
+        & label{
+            font-weight: 900;
+            margin: 0
+        }
+
+        & input{
+            margin-bottom: 10px;
+        }
+
+        & button{
+            border: 0;
+            padding: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        &__signin{
+            background-color: $orange;
+        }
+
+        & p{
+            font-size: 14px;
+            color: $textColor;
+        }
+    }
+
+}

@@ -1,0 +1,30 @@
+@import "../colors.scss";
+
+.cartproduct{
+    margin: 10px;
+    display: flex;
+
+    & img{
+        width: 200px;
+    }
+    &__info{
+        & p{
+            font-weight: 900;
+        }
+
+
+        & button{
+            border: 0;
+            padding: 5px;
+            margin: 30px  auto;
+            cursor: pointer;
+            width: 200px;
+            background-color: $orange;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+
+        padding: 20px;
+    }
+}

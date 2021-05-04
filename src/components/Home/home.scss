@@ -1,0 +1,19 @@
+
+.home{
+    max-width: 1000px;
+    margin: 0 auto;
+
+    justify-content: center;
+    &__banner{
+        & img{
+            z-index: -1;
+            width: 100%;
+             mask-image: linear-gradient(to bottom,rgba(0,0,0,1),rgba(0,0,0,0));
+             margin-bottom: -150px;
+        }
+    }
+    &__row{
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

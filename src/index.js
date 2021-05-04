@@ -3,16 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import UserContextProvider from './components/UserContextProvider';
-import ChatContextProvider from './components/ChatContextProvider';
+import StateProvider from './components/StateProvider';
+import reducer, { initialState } from './components/reducer'
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChatContextProvider>
-    <UserContextProvider>
-    <App />
-    </UserContextProvider>
-    </ChatContextProvider>
+    <StateProvider reducer={reducer} initialState={initialState}>
+      <App />
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
